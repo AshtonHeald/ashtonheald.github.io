@@ -1,0 +1,196 @@
+@import url("https://unpkg.com/normalize.css");
+@import url("https://unpkg.com/reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Waterfall&display=swap");
+@import "./_variables.scss";
+:root {
+	font-size: 10px;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+body {
+	font-size: 1.6rem;
+	line-height: 1.2;
+	padding: 2rem;
+	height: 100vh;
+	font-family: "Josefin Sans", sans-serif;
+}
+#container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	max-width: 40rem;
+	margin: 0 auto;
+}
+header {
+	display: flex;
+	width: 100%;
+	display: grid;
+	place-items: center;
+	img {
+		border-radius: 50%;
+		width: 15rem;
+		margin-bottom: 0.5rem;
+	}
+	h1 {
+		font-size: 3.8rem;
+		font-family: "Waterfall", cursive;
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+	}
+	h2 {
+		font-size: 1.6rem;
+		font-weight: normal;
+	}
+	a {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		margin: 1rem 0;
+		color: $color4;
+		img {
+			width: 1.5rem;
+			height: 1.5rem;
+			margin-right: 0.5rem;
+			filter: $greyFilter;
+		}
+	}
+}
+ul {
+	margin: 0.75rem 0;
+	li {
+		display: flex;
+		font-size: 1.8rem;
+		padding: 0.75rem 0;
+		position: relative;
+		a {
+			background-color: $color2;
+			transition: 0.2s ease-in-out;
+			border: solid 1px $color1;
+			&:first-of-type {
+				display: grid;
+				place-items: center;
+				width: calc(100% - 5rem);
+				text-align: center;
+				margin-right: 1.5rem;
+				text-decoration: none;
+				line-height: 1.4;
+				font-family: "Josefin Sans", sans-serif;
+				color: $color1;
+				position: relative;
+			}
+			&:first-of-type:after {
+				position: absolute;
+				transition: 0.2s;
+				content: "";
+				width: 0;
+				left: 50%;
+				bottom: -1px;
+				height: 3px;
+				background: $color3;
+			}
+			&:first-of-type:hover:after,
+			&:first-of-type:focus:after {
+				width: 100%;
+				left: 0;
+			}
+			&:nth-of-type(2) {
+				width: 5rem;
+				height: 5rem;
+				display: grid;
+				place-items: center;
+				&:hover,
+				&:focus {
+					border: 3px solid $color3;
+				}
+				img {
+					width: 2.5rem;
+					height: 2.5rem;
+					transition: 0.1s;
+				}
+			}
+		}
+		button {
+			padding: 0;
+			width: 5rem;
+			height: 5rem;
+			display: grid;
+			place-items: center;
+			border: solid 1px $color1;
+			background-color: $color2;
+			transition: 0.2s ease-in-out;
+			cursor: copy;
+			span {
+				content: "Copy Email";
+				visibility: hidden;
+				position: absolute;
+				z-index: 9999;
+				top: 6.5rem;
+				display: grid;
+				place-content: center;
+				right: 0;
+				width: 9rem;
+				height: 3rem;
+				color: $color2;
+				font-size: 1.2rem;
+				text-align: center;
+				background: $color1;
+				border-radius: 1.2px;
+				opacity: 0;
+				transition: opacity 0.3s;
+				&:before {
+					content: "";
+					opacity: 0;
+					transition: opacity 0.3s;
+					visibility: hidden;
+					position: absolute;
+					z-index: 9998;
+					top: -0.5rem;
+					right: 2rem;
+					width: 0;
+					height: 0;
+					border-left: 5px solid transparent;
+					border-right: 5px solid transparent;
+					border-bottom: 5px solid $color3;
+				}
+			}
+			&:hover,
+			&:focus {
+				border: 3px solid $color3;
+				span {
+					visibility: visible;
+					opacity: 1;
+					&:before {
+						display: block;
+						visibility: visible;
+						opacity: 1;
+					}
+				}
+			}
+			img {
+				width: 2.5rem;
+				height: 2.5rem;
+				transition: 0.1s;
+			}
+		}
+	}
+}
+footer {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	margin-top: auto;
+	span {
+		display: flex;
+		align-items: center;
+		margin-top: auto;
+		img {
+			filter: $pinkFilter;
+			height: 1.8rem;
+			margin: 0 0.5rem;
+			width: 1.8rem;
+		}
+	}
+}
