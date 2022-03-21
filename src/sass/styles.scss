@@ -127,7 +127,7 @@ ul {
 				visibility: hidden;
 				position: absolute;
 				z-index: 9999;
-				top: 6.5rem;
+				top: 7rem;
 				display: grid;
 				place-content: center;
 				right: 0;
@@ -137,7 +137,7 @@ ul {
 				font-size: 1.2rem;
 				text-align: center;
 				background: $color1;
-				border-radius: 1.2px;
+				border-radius: 33px;
 				opacity: 0;
 				transition: opacity 0.3s;
 				&:before {
@@ -153,7 +153,7 @@ ul {
 					height: 0;
 					border-left: 5px solid transparent;
 					border-right: 5px solid transparent;
-					border-bottom: 5px solid $color3;
+					border-bottom: 5px solid $color1;
 				}
 			}
 			&:hover,
