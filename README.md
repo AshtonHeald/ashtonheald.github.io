@@ -1,8 +1,6 @@
 # ashtonheald.github.io
-> Linktree alternative
-
 ### About
-Bio links 
+Linktree alternative
 
 ### Leanred
 > Sass
