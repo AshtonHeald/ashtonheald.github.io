@@ -1,15 +1,9 @@
 # ashtonheald.github.io
 ### About
 Linktree alternative
-
-### Leanred
+### Learned
 > Sass
-
-### How to
-- install
-- run
-
+### Install
+` npm install `
 ### Use
-
-
-### Liscence
+` npm run `
