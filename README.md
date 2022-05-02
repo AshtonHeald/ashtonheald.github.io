@@ -1,6 +1,6 @@
 # ashtonheald.github.io
 ### About
-Linktree alternative
+Link Profile
 ### Learned
 > Sass
 ### Install
