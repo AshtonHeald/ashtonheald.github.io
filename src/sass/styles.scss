@@ -112,69 +112,6 @@ ul {
 				}
 			}
 		}
-		button {
-			padding: 0;
-			width: 5rem;
-			height: 5rem;
-			display: grid;
-			place-items: center;
-			border: solid 1px $color1;
-			background-color: $color2;
-			transition: 0.2s ease-in-out;
-			cursor: copy;
-			span {
-				content: "Copy Email";
-				visibility: hidden;
-				position: absolute;
-				z-index: 9999;
-				top: 7rem;
-				display: grid;
-				place-content: center;
-				right: 0;
-				width: 9rem;
-				height: 3rem;
-				color: $color2;
-				font-size: 1.2rem;
-				text-align: center;
-				background: $color1;
-				border-radius: 33px;
-				opacity: 0;
-				transition: opacity 0.3s;
-				&:before {
-					content: "";
-					opacity: 0;
-					transition: opacity 0.3s;
-					visibility: hidden;
-					position: absolute;
-					z-index: 9998;
-					top: -0.5rem;
-					right: 2rem;
-					width: 0;
-					height: 0;
-					border-left: 5px solid transparent;
-					border-right: 5px solid transparent;
-					border-bottom: 5px solid $color1;
-				}
-			}
-			&:hover,
-			&:focus {
-				border: 3px solid $color3;
-				span {
-					visibility: visible;
-					opacity: 1;
-					&:before {
-						display: block;
-						visibility: visible;
-						opacity: 1;
-					}
-				}
-			}
-			img {
-				width: 2.5rem;
-				height: 2.5rem;
-				transition: 0.1s;
-			}
-		}
 	}
 }
 footer {
