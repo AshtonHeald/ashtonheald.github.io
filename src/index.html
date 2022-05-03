@@ -6,60 +6,91 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/png" href="assets/link.png">
-	<title>Ashton Heald | Linktree</title>
+	<title>Ashton Heald | Link Profile</title>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 	<div id="container">
-		<header>
-			<img src="assets/ash.png" alt="灰">
-			<h1>Ashton G. Heald</h1>
-			<h2>Writer | Developer | Thinker</h2>
-			<a href="https://www.google.com/maps/place/Oklahoma+City,+OK/@37.6988984,-99.8335763,5.25z/data=!4m5!3m4!1s0x87ad8a547ef8d281:0x33a21274d14f3a9d!8m2!3d35.4675602!4d-97.5164276"
-				rel="noopener noreferrer" target="_blank"><img src="assets/icon/map-marker.svg" alt="love"> Oklahoma
-				City,
-				OK</a>
-		</header>
-		<main>
-			<article>
-				<ul>
-					<li>
-						<a class="test" href="https://ash.cafe/" rel="noopener noreferrer" target="_blank">Personal
-							Blog</a>
-						<a class="test" href="https://twitter.com/AshtonHeald" rel="noopener noreferrer"
-							target="_blank">
-							<img src="assets/icon/twitter.svg" alt="Twitter">
-						</a>
-					</li>
-					<li>
-						<a class="test" href="https://ashtonheald.dev/" rel="noopener noreferrer"
-							target="_blank">Portfolio</a>
-						<a class="test" href="https://github.com/AshtonHeald" rel="noopener noreferrer" target="_blank">
-							<img src="assets/icon/github.svg" alt="GitHub">
-						</a>
-					</li>
-					<li>
-						<a class="test" href="https://dev.to/ashtonheald" rel="noopener noreferrer"
-							target="_blank">Technical
-							Blog</a>
-						<a class="test" href="https://codepen.io/AshtonHeald" rel="noopener noreferrer" target="_blank">
-							<img src="assets/icon/codepen.svg" alt="CodePen">
-						</a>
-					</li>
-					<li>
-						<a class="test" href="https://www.linkedin.com/in/ashtonheald/" rel="noopener noreferrer"
-							target="_blank">LinkedIn</a>
-						<a class="test" href="mailto:ashtonheald@pm.me" target="_blank" rel="noopener noreferrer">
-							<img src="assets/icon/envelope.svg" alt="Coffee">
-						</a>
-					</li>
-				</ul>
-			</article>
-		</main>
-		<footer>
-			<span>Made with <img src="assets/icon/heart.svg" alt="love"></span>
-		</footer>
+		<div id="card">
+			<header>
+				<img src="assets/ash.png" alt="灰">
+				<h1>Ashton G. Heald</h1>
+				<h2>Writer | Developer | Thinker</h2>
+				<a href="https://www.google.com/maps/place/Oklahoma+City,+OK/@37.6988984,-99.8335763,5.25z/data=!4m5!3m4!1s0x87ad8a547ef8d281:0x33a21274d14f3a9d!8m2!3d35.4675602!4d-97.5164276"
+					rel="noopener noreferrer" target="_blank"><img src="assets/icon/map-marker.svg" alt="love"> Oklahoma
+					City,
+					OK</a>
+			</header>
+			<main>
+				<article>
+					<ul>
+						<li>
+							<a class="item" href="https://ash.cafe/" rel="noopener noreferrer" target="_blank">Personal
+								Blog</a>
+							<a class="item" href="https://twitter.com/AshtonHeald" rel="noopener noreferrer"
+								target="_blank">
+								<img src="assets/icon/twitter.svg" alt="Twitter">
+							</a>
+						</li>
+						<li>
+							<a class="item" href="https://ashtonheald.dev/" rel="noopener noreferrer"
+								target="_blank">Portfolio</a>
+							<a class="item" href="https://codepen.io/AshtonHeald" rel="noopener noreferrer"
+								target="_blank">
+								<img src="assets/icon/codepen.svg" alt="CodePen">
+							</a>
+						</li>
+						<li>
+							<a class="item" href="https://dev.to/ashtonheald" rel="noopener noreferrer"
+								target="_blank">Technical
+								Blog</a>
+							<a class="item" href="https://github.com/AshtonHeald" rel="noopener noreferrer"
+								target="_blank">
+								<img src="assets/icon/github.svg" alt="GitHub">
+							</a>
+						</li>
+						<li>
+							<a class="item" href="https://www.linkedin.com/in/ashtonheald/" rel="noopener noreferrer"
+								target="_blank">LinkedIn</a>
+							<a class="item" href="mailto:ashtonheald@pm.me" target="_blank" rel="noopener noreferrer">
+								<img src="assets/icon/envelope.svg" alt="Coffee">
+							</a>
+						</li>
+						<li>
+							<div class="item slideshow-container">
+								<div class="mySlides fade">
+									<div class="link-container">
+										<a href="https://autisticadvocacy.org/" rel="noreferrer" target="_blank"
+											class="link">Autism
+											Advocacy</a>
+									</div>
+								</div>
+								<div class="mySlides fade">
+									<div class="link-container">
+										<a href="https://www.shrinerschildrens.org/" rel="noreferrer" target="_blank"
+											class="link">Shriners
+											Hospital</a>
+									</div>
+								</div>
+								<div class="mySlides fade">
+									<div class="link-container">
+										<a href="https://www.hrc.org/" rel="noreferrer" target="_blank"
+											class="link">Human
+											Equality</a>
+									</div>
+								</div>
+								<div class="prev" onclick="plusSlides(-1)">&#10094;</div>
+								<div class="next" onclick="plusSlides(1)">&#10095;</div>
+							</div>
+							<div class="item">
+								<img src="assets/icon/heart.svg" alt="♥">
+							</div>
+						</li>
+					</ul>
+				</article>
+			</main>
+		</div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
 	<script src="js/scripts.js"></script>

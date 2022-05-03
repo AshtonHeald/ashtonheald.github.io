@@ -2,9 +2,16 @@ $color1: #0a0a0a;
 $color2: #ffffff;
 $color3: #ff1493;
 $color4: #808080;
+$color5: #f4f4f4;
 
 $greyFilter: invert(57%) sepia(0%) saturate(480%) hue-rotate(178deg)
 	brightness(87%) contrast(87%);
 $pinkFilter: invert(33%) sepia(73%) saturate(6462%) hue-rotate(313deg)
 	brightness(97%) contrast(109%);
 // FF9BAD
+
+@mixin medium {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
