@@ -1,3 +1,21 @@
+// === === === === ===
+// == Loader Script ==
+// === === === === ===
+const loader = document.querySelector(".loader");
+const main = document.querySelector(".main");
+function init() {
+	setTimeout(() => {
+		loader.style.opacity = 0;
+		loader.style.display = "none";
+
+		main.style.display = "block";
+		setTimeout(() => (main.style.opacity = 1), 50);
+	}, 1000);
+}
+init();
+// === === === === ===
+// == Slide Scripts ==
+// === === === === ===
 var slideIndex = 1;
 var myTimer;
 window.addEventListener("load", function () {
@@ -11,6 +29,8 @@ window.addEventListener("load", function () {
 	)[0];
 	slideshowContainer.addEventListener("mouseenter", pause);
 	slideshowContainer.addEventListener("mouseleave", resume);
+	slideshowContainer.addEventListener("focusin", pause);
+	slideshowContainer.addEventListener("focusout", resume);
 });
 // NEXT AND PREVIOUS CONTROL
 function plusSlides(n) {
@@ -61,4 +81,28 @@ resume = () => {
 	myTimer = setInterval(function () {
 		plusSlides(slideIndex);
 	}, 4000);
+};
+// === === === === ===
+// == Theme Scripts ==
+// === === === === ===
+var toggle = document.getElementById("theme-toggle");
+
+var storedTheme =
+	localStorage.getItem("theme") ||
+	(window.matchMedia("(prefers-color-scheme: dark)").matches
+		? "dark"
+		: "light");
+if (storedTheme)
+	document.documentElement.setAttribute("data-theme", storedTheme);
+
+toggle.onclick = function () {
+	var currentTheme = document.documentElement.getAttribute("data-theme");
+	var targetTheme = "light";
+
+	if (currentTheme === "light") {
+		targetTheme = "dark";
+	}
+
+	document.documentElement.setAttribute("data-theme", targetTheme);
+	localStorage.setItem("theme", targetTheme);
 };
