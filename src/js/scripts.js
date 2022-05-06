@@ -89,9 +89,9 @@ var toggle = document.getElementById("theme-toggle");
 
 var storedTheme =
 	localStorage.getItem("theme") ||
-	(window.matchMedia("(prefers-color-scheme: dark)").matches
-		? "dark"
-		: "light");
+	(window.matchMedia("(prefers-color-scheme: light)").matches
+		? "light"
+		: "dark");
 if (storedTheme)
 	document.documentElement.setAttribute("data-theme", storedTheme);
 
