@@ -14,6 +14,7 @@ body {
 	line-height: 1.2;
 	height: 100vh;
 	font-family: "Josefin Sans", sans-serif;
+	background-color: var(--color2);
 	@include medium {
 		background-color: var(--color5);
 	}
@@ -154,6 +155,8 @@ ul {
 				background: none;
 				display: grid;
 				place-items: center;
+				width: 5rem;
+				height: 5rem;
 				img {
 					width: 2.5rem;
 					height: 2.5rem;
@@ -162,6 +165,7 @@ ul {
 				&:hover,
 				&:focus {
 					filter: var(--filter-3);
+					cursor: pointer;
 				}
 			}
 		}
