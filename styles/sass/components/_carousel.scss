@@ -1,0 +1,16 @@
+.slideshow-container {
+	display: flex;
+	width: 100%;
+	button {
+		font-size: 2.5rem;
+		padding: 1.25rem 1.5rem;
+		color: var(--color1);
+		background-color: var(--color5);
+	}
+	.mySlides {
+		width: calc(100% - 10rem);
+		.carousel-btn {
+			background-color: var(--color5);
+		}
+	}
+}

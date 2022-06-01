@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px; /*for using REM units*/
+	scroll-behavior: smooth;
+}
+body {
+	background-color: var(--color2);
+}
+h1 {
+	margin: 0;
+}
+h2 {
+	margin: 0.25rem 0 0.25rem;
+}
+p {
+	margin: 0;
+}
+button {
+	background: none;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+}
+a:focus,
+button:focus,
+button:focus-visible {
+	outline: none;
+}

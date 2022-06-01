@@ -2,7 +2,7 @@
 // == Loader Script ==
 // === === === === ===
 const loader = document.querySelector(".loader");
-const main = document.querySelector(".main");
+const main = document.querySelector("#container");
 function init() {
 	setTimeout(() => {
 		loader.style.opacity = 0;
@@ -10,7 +10,7 @@ function init() {
 
 		main.style.display = "block";
 		setTimeout(() => (main.style.opacity = 1), 50);
-	}, 1000);
+	}, 1200);
 }
 init();
 // === === === === ===

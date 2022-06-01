@@ -1,0 +1,78 @@
+@use "../abstracts/breakpoints" as bp;
+// ===== theme switch ===== //
+#theme-toggle {
+	position: absolute;
+	right: 0;
+	img {
+		filter: var(--filter2);
+	}
+	@include bp.small {
+		right: 1.5rem;
+	}
+}
+[data-theme="light"] .d-block-light,
+[data-theme="dark"] .d-block-dark {
+	display: block !important;
+}
+.d-block-light {
+	transform: rotate(-130deg);
+}
+.d-block-dark {
+	transform: rotate(0deg);
+}
+.d-none {
+	display: none !important;
+}
+// ===== menu buttons ===== //
+.sm-btn {
+	width: 5rem;
+	height: 5rem;
+	&:hover,
+	&:focus {
+		border: 3px solid var(--color3);
+		transition: 0.05s ease;
+	}
+	img {
+		max-width: 2.5rem;
+		max-height: 2.5rem;
+		filter: var(--filter2);
+	}
+}
+button.sm-btn {
+	&:hover,
+	&:focus {
+		border: 1px solid var(--color1);
+		color: var(--color3);
+	}
+}
+.lg-btn {
+	width: calc(100% - 13rem);
+}
+.sm-btn,
+.lg-btn,
+.carousel-btn {
+	border: 1px solid var(--color1);
+	display: grid;
+	place-items: center;
+}
+.lg-btn,
+.carousel-btn {
+	height: 5rem;
+	margin: 0 1.5rem;
+	position: relative;
+	&:after {
+		position: absolute;
+		content: "";
+		width: 0;
+		left: 50%;
+		bottom: -1px;
+		height: 3px;
+		transition: 0.2s ease;
+		background: var(--color3);
+	}
+	&:hover:after,
+	&:focus:after {
+		width: 100%;
+		left: 0;
+	}
+}
