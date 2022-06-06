@@ -1,0 +1,10 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+/* reseting some normalize styles */
+:focus-visible {
+	outline: none;
+	border: none;
+}
+a {
+	text-decoration: none;
+}
