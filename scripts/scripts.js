@@ -18,9 +18,9 @@ closeBtn.addEventListener("click", () => {
 // following are the code to change sidebar button(optional)
 function menuBtnChange() {
 	if (sidebar.classList.contains("open")) {
-		closeBtn.innerHTML = "❌"; //replacing the iocns class
+		closeBtn.innerHTML = '<img src="assets/icons/close.png" alt="❌">'; //replacing the iocns class
 	} else {
-		closeBtn.innerHTML = "➡️"; //replacing the iocns class
+		closeBtn.innerHTML = '<img src="assets/icons/menu.png" alt="➡️">'; //replacing the iocns class
 	}
 }
 

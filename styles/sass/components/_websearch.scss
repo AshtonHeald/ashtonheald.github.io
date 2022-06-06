@@ -26,6 +26,12 @@
 		background-color: var(--gray-2);
 		border-left: 1px solid var(--gray-5);
 		border-radius: 0 var(--radius-2) var(--radius-2) 0;
+		display: grid;
+		place-items: center;
+		img {
+			max-height: var(--size-6);
+			max-width: var(--size-6);
+		}
 	}
 	#searchEngines,
 	#searchBtn {
