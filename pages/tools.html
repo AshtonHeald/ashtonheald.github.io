@@ -6,34 +6,87 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Start Page | Tools</title>
-	<link rel="stylesheet" href="../../styles/css/main.css">
+	<link rel="stylesheet" href="../styles/css/main.css">
 </head>
 
 <body>
-	<?php include '../../includes/navigation.php'; ?>
+	<div id="sidebar">
+		<div id="logo-details">
+			<a href="https://start.ashthe.dev" id="logoName">Start-Page</a>
+			<span id="menuBtn" class="subMenuBtn"><img src="../assets/icons/menu.png" alt="➡️"></span>
+		</div>
+		<nav>
+			<ul id="navList">
+				<li>
+					<a href="../">
+						<span><img src="../assets/icons/home.png" alt="🏡"></span>
+						<span>Home</span>
+					</a>
+				</li>
+				<li>
+					<a href="./news.html">
+						<span><img src="../assets/icons/news.png" alt="📰"></span>
+						<span>News</span>
+					</a>
+				</li>
+				<li>
+					<a href="./tools.html">
+						<span><img src="../assets/icons/tools.png" alt="⚒️"></span>
+						<span>Tools</span>
+					</a>
+				</li>
+				<li>
+					<a href="./games.html">
+						<span><img src="../assets/icons/games.png" alt="🎮"></span>
+						<span>Games</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="themeContainer">
+			<form id="themeSwitch">
+				<div>
+					<input checked type="radio" id="auto" name="theme" value="auto">
+					<label for="auto">Auto</label>
+				</div>
+				<div>
+					<input type="radio" id="light" name="theme" value="light">
+					<label for="light">Light</label>
+				</div>
+				<div>
+					<input type="radio" id="dark" name="theme" value="dark">
+					<label for="dark">Dark</label>
+				</div>
+				<div>
+					<input type="radio" id="cyber" name="theme" value="cyber">
+					<label for="cyber">Cyber</label>
+				</div>
+			</form>
+		</div>
+
+	</div>
 	<div id="container">
 		<section id="main">
 			<div class="container">
 				<div class="card-container">
-					<a href="" class="card">
+					<a href="https://start.ashthe.dev/simple-calculator" class="card">
 						<h3>Calculator</h3>
 					</a>
 					<a href="" class="card">
-						<h3>Calculator</h3>
+						<h3>Lorem</h3>
 					</a>
 					<a href="" class="card">
-						<h3>Calculator</h3>
-					</a>
-					<a href="" class="card">
-						<h3>Calculator</h3>
+						<h3>Ipsum</h3>
 					</a>
 				</div>
 			</div>
 		</section>
-		<?php include '../../includes/footer.php'; ?>
+		<footer>
+			<div>Built by <a href="">Ashton Heald</a></div>
+		</footer>
 	</div>
 
 </body>
-<script src="../../scripts/scripts.js"></script>
+<script src="../scripts/scripts.js"></script>
 
 </html>
