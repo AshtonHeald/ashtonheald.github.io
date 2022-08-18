@@ -1,5 +1,5 @@
 # Start Page & Code Playground
-lorem
+Personal start page and menu guide for smaller projects.
 ## Live Link (Github Pages)
 - https://start.ashthe.dev
 ## Technologies Used
