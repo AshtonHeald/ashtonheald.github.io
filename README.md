@@ -4,6 +4,5 @@ Personal start page and menu guide for smaller projects.
 - https://start.ashthe.dev
 ## Technologies Used
 - HTML
-- Bootstrap
 - SCSS
 - JavaScript
