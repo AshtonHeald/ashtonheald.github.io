@@ -1,0 +1,46 @@
+@use "../abstracts/breakpoints" as *;
+#webSearch {
+	display: flex;
+	height: 48px;
+	justify-content: center;
+	margin-top: 5%;
+	#searchEngines {
+		border: 2px solid;
+		appearance: none;
+		border-radius: 6px 0 0 6px;
+		width: 48px;
+    &:hover {
+      cursor: pointer;
+    }
+		@include media-3 {
+			width: 160px;
+		}
+		option {
+			font-size: 1.2rem;
+		}
+	}
+	#searchBar {
+		width: auto;
+		@include media-3 {
+			width: 320px;
+		}
+		border-radius: 0;
+		border-top: 2px solid;
+		border-bottom: 2px solid;
+		padding: 10px;
+    background-color: transparent;
+	}
+	#searchBtn {
+		width: 48px;
+		padding: 0;
+		border: 2px solid;
+		border-radius: 0 6px 6px 0;
+		i {
+			transform: scale(-1, 1);
+		}
+	}
+	#searchEngines,
+	#searchBtn {
+		text-align: center;
+	}
+}

@@ -1,0 +1,160 @@
+@use "../abstracts/breakpoints" as *;
+nav {
+	align-items: center;
+	display: flex;
+	height: 50px;
+	border-bottom: 2px solid;
+	position: relative;
+	top: 25px;
+	@include media-3 {
+		display: block;
+		border-bottom: 0;
+		border-right: 2px solid;
+		height: 100vh;
+		left: 0;
+		overflow: hidden;
+		padding: 16px;
+		position: absolute;
+		position: fixed;
+		top: 0;
+		transition: 500ms;
+		width: 80px;
+		ul {
+			display: block;
+		}
+		.custom-tooltip {
+			margin-left: 50px;
+		}
+	}
+}
+// =========================
+#navHeader {
+	position: absolute;
+	display: flex;
+	@include media-3 {
+		position: relative;
+		margin-bottom: 48px;
+	}
+	#menuBtnContainer {
+		display: none;
+		@include media-3 {
+			display: grid;
+			height: 48px;
+			place-items: center;
+			text-align: center;
+			width: 48px;
+			border-radius: 6px;
+			span {
+				font-size: 28px;
+			}
+		}
+	}
+	#logo {
+		font-size: 20px;
+		font-weight: bold;
+		margin: 5px;
+		padding: 8.5px;
+		border-radius: 6px;
+		&:hover {
+			outline: 1px solid;
+		}
+		@include media-3 {
+			display: none;
+			margin: 0;
+			height: 48px;
+			font-size: 28px;
+		}
+	}
+}
+// =========================
+#navMenu {
+	display: flex;
+	justify-content: end;
+	margin: 0 50px;
+	width: 100%;
+	@include media-2 {
+		justify-content: center;
+	}
+	@include media-3 {
+		display: block;
+		margin: 0;
+	}
+	li {
+		border-radius: 6px;
+		display: flex;
+		margin: 5px;
+		@include media-3 {
+			margin: 8px 0;
+		}
+		a {
+			display: flex;
+			@include media-3 {
+				width: 100%;
+			}
+		}
+		span {
+			display: grid;
+			height: 40px;
+			place-items: center;
+			text-align: center;
+			width: 40px;
+			@include media-3 {
+				height: auto;
+			}
+			&:first-child {
+				font-size: 22px;
+				@include media-3 {
+					font-size: 28px;
+					width: 48px;
+					height: 48px;
+				}
+			}
+			&:nth-of-type(2) {
+				display: none;
+				margin-right: 7px;
+				width: auto;
+				@include media-2 {
+					display: flex;
+				}
+				@include media-3 {
+					display: none;
+				}
+			}
+		}
+		&:hover {
+			outline: 2px solid;
+		}
+	}
+}
+// ============================================================================================
+#sidebar.open {
+	.custom-tooltip {
+		display: none !important;
+	}
+	transition: 500ms;
+	width: 200px;
+	#logo {
+		display: flex;
+	}
+	#menuBtnContainer {
+		@include media-3 {
+			position: absolute;
+			right: 0;
+		}
+	}
+	li {
+		a span:nth-of-type(2) {
+			display: grid;
+			opacity: 1;
+		}
+	}
+	button {
+		span:nth-of-type(2) {
+			display: grid;
+			opacity: 1;
+		}
+	}
+}
+.hide {
+	display: none;
+}

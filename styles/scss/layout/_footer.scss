@@ -1,0 +1,24 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 81px);
+  text-align: center;
+  height: 50px;
+  transition: 500ms;
+  .container {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: baseline;
+    p {
+      padding: 5px 10px;
+      border: 1px solid var(--primary);
+      border-radius: 4px;
+      background-color: var(--secondary);
+    }
+  }
+}
+#sidebar.open ~ #container footer {
+  transition: 500ms;
+  width: calc(100% - 241px);
+}

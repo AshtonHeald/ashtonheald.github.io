@@ -1,0 +1,28 @@
+@use "../abstracts/breakpoints" as *;
+.icon {
+  max-width: 28px;
+  max-height: 28px;
+}
+form * {
+  appearance: none;
+  border: none;
+}
+
+#container {
+	background-color: var(--tertiary);
+	height: calc(100vh - 50px);
+  position: relative;
+  @include media-3 {
+    height: 100vh;
+  }
+}
+@include media-3 {
+  #container {
+    margin-left: 80px;
+    transition: 500ms;
+  }
+  #sidebar.open ~ #container {
+    margin-left: 200px;
+    transition: 500ms;
+  }
+}

@@ -1,0 +1,19 @@
+.card-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	.card {
+		width: 250px;
+		height: 150px;
+		font-weight: bold;
+		background-color: var(--secondary);
+		//box-shadow: ;
+		border-radius: 12px;
+		display: grid;
+		place-items: center;
+		margin: 20px;
+		&:hover {
+			//box-shadow: ;
+		}
+	}
+}

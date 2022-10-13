@@ -1,0 +1,33 @@
+$breakpoints: (
+	//ss - screen size
+	"size-1": 576px,
+	"size-2": 768px,
+	"size-3": 992px,
+	"size-4": 1200px,
+);
+@mixin media-1 {
+	@media (min-width: map-get($breakpoints, "size-1")) {
+		@content;
+	}
+}
+@mixin media-2 {
+	@media (min-width: map-get($breakpoints, "size-2")) {
+		@content;
+	}
+}
+@mixin media-3 {
+	@media (min-width: map-get($breakpoints, "size-3")) {
+		@content;
+	}
+}
+@mixin media-4 {
+	@media (min-width: map-get($breakpoints, "size-4")) {
+		@content;
+	}
+}
+
+@mixin breakpoint($bp: 0) {
+	@media (min-width: $bp) {
+		@content;
+	}
+}
