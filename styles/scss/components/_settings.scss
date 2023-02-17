@@ -1,0 +1,65 @@
+@use "../abstracts/breakpoints" as *;
+#themeContainer {
+	position: absolute;
+	right: 0;
+	display: flex;
+	margin: 5px;
+	@include media-3 {
+		bottom: 10px;
+		right: auto;
+		margin: 8px 0;
+	}
+}
+#settingBtn {
+	display: grid;
+	place-items: center;
+	width: 40px;
+	height: 40px;
+	@include media-3 {
+		width: 46px !important;
+		height: 46px;
+	}
+	i {
+		padding: 10px;
+		font-size: 20px;
+	}
+}
+
+#settingsModal {
+	position: absolute;
+	right: -5px;
+	top: 46px;
+	transform: scale(0);
+	transition: 200ms ease-in-out;
+	border-left: 2px solid;
+	border-bottom: 2px solid;
+	border-radius: 0 0 0 10px;
+	background-color: var(--secondary);
+	#colorPicker {
+		display: none;
+	}
+	@include media-3 {
+		top: auto;
+		bottom: 48px;
+		right: 0;
+		border: none;
+		border-radius: none;
+		background-color: transparent;
+	}
+	.modal-header {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 2px solid;
+	}
+}
+#settingsModal.active {
+	transform: scale(1);
+	z-index: 2;
+}
+#sidebar.open {
+	#settingsModal {
+		@include media-3 {
+			right: -126px;
+		}
+	}
+}

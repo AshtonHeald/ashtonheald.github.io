@@ -1,14 +1,14 @@
 @use "../abstracts/breakpoints" as *;
 #marqueContainer {
 	position: absolute;
-	top: -50px;
-    height: 25px;
+	height: 25px;
 	width: 100%;
-    border-bottom: 2px solid;
-    font-size: 0.875rem;
-    padding: 2px;
-    @include media-3 {
-        right: 0;
-        top: 0;
-    }
+	border-bottom: 2px solid;
+	font-size: 0.875rem;
+	background-color: var(--secondary);
+	padding: 2px;
+	@include media-3 {
+		right: 0;
+		top: 0;
+	}
 }

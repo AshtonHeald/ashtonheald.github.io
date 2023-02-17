@@ -1,0 +1,20 @@
+@use "../abstracts/breakpoints" as *;
+#chatgpt {
+	position: absolute;
+	display: grid;
+	place-items: center;
+	width: 48px;
+	height: 48px;
+	bottom: 0;
+	right: 0;
+	border-radius: 36px 0 0 0;
+	border-top: 2px solid;
+	border-left: 2px solid;
+	background-color: var(--secondary);
+	svg {
+		width: 22px;
+		height: 22px;
+		margin-top: 8px;
+		margin-left: 8px;
+	}
+}
