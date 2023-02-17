@@ -22,67 +22,60 @@ if (document.layers) {
 }
 document.oncontextmenu = new Function("return false");
 
+// ===== Canvas Begins ===== //
+
 let c = document.getElementById("c");
 let ctx = c.getContext("2d");
 
-//making the canvas full screen
-c.height = window.innerHeight;
-c.width = window.innerWidth;
+function setup() {
+	c.height = window.innerHeight;
+	c.width = window.innerWidth;
 
-//matrix characters - taken from the unicode charset
-let matrix = "123456780ABCDEFGHIJKLMNOPQRTabcdefghijklmnopqrstuvwxyz";
-//converting the string into an array of single characters
-matrix = matrix.split("");
+	let matrix = "123456780ABCDEFGHIJKLMNOPQRTabcdefghijklmnopqrstuvwxyz";
+	matrix = matrix.split("");
 
-let font_size = 16;
-let columns = c.width / font_size; //number of columns for the rain
-//an array of drops - one per column
-let drops = [];
-//x below is the x coordinate
-//1 = y co-ordinate of the drop(same for every drop initially)
-for (let x = 0; x < columns; x++) drops[x] = 1;
+	let font_size = 16;
+	let columns = c.width / font_size;
+	let drops = [];
 
-//drawing the characters
-function draw() {
-	//Black BG for the canvas
-	//translucent BG to show trail
-	// ===================================================================
-	//Make these changable varibles
-	let theme = localStorage.getItem("theme-preference");
-	if (theme === "dark") {
-		ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-	} else if (theme === "light") {
-		ctx.fillStyle = "rgba(255, 255, 255, 0.05)";
-	} else {
-		theme = "light"; // set default theme to light
-		ctx.fillStyle = "rgba(255, 255, 255, 0.05)";
-	}
-	// ===================================
-	ctx.fillRect(0, 0, c.width, c.height);
-	// ===================================
-	//ctx.fillStyle = "#0F0"; //green text
-	//ctx.fillStyle = "#FE019A"; //pink text
-	ctx.fillStyle = getComputedStyle(root).getPropertyValue("--variable-color");
-	const observer = new MutationObserver(() => {
+	for (let x = 0; x < columns; x++) drops[x] = 1;
+
+	function draw() {
+		let theme = localStorage.getItem("theme-preference");
+		if (theme === "dark") {
+			ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+		} else if (theme === "light") {
+			ctx.fillStyle = "rgba(255, 255, 255, 0.05)";
+		} else {
+			theme = "light";
+			ctx.fillStyle = "rgba(255, 255, 255, 0.05)";
+		}
+		ctx.fillRect(0, 0, c.width, c.height);
 		ctx.fillStyle = getComputedStyle(root).getPropertyValue("--variable-color");
-	});
-	observer.observe(root, { attributes: true });
-	// ===================================================================
-	ctx.font = font_size + "px matrix";
-	//looping over drops
-	for (let i = 0; i < drops.length; i++) {
-		//a random matrix character to print
-		let text = matrix[Math.floor(Math.random() * matrix.length)];
-		//x = i*font_size, y = value of drops[i]*font_size
-		ctx.fillText(text, i * font_size, drops[i] * font_size);
+		const observer = new MutationObserver(() => {
+			ctx.fillStyle = getComputedStyle(root).getPropertyValue("--variable-color");
+		});
+		observer.observe(root, { attributes: true });
+		ctx.font = font_size + "px matrix";
 
-		//sending the drop back to the top randomly after it has crossed the screen
-		//adding a randomness to the reset to make the drops scattered on the Y axis
-		if (drops[i] * font_size > c.height && Math.random() > 0.975) drops[i] = 0;
-
-		//incrementing Y coordinate
-		drops[i]++;
+		for (let i = 0; i < drops.length; i++) {
+			let text = matrix[Math.floor(Math.random() * matrix.length)];
+			ctx.fillText(text, i * font_size, drops[i] * font_size);
+			if (drops[i] * font_size > c.height && Math.random() > 0.975) drops[i] = 0;
+			drops[i]++;
+		}
 	}
+
+	setInterval(draw, 33);
+
+	window.addEventListener("resize", () => {
+		c.height = window.innerHeight;
+		c.width = window.innerWidth;
+		columns = c.width / font_size;
+		drops = [];
+		for (let x = 0; x < columns; x++) drops[x] = 1;
+		draw();
+	});
 }
 
-setInterval(draw, 33);
+setup();
