@@ -73,5 +73,5 @@ const navbar = `
 	</ul>
 </nav>
 `;
-// inserting navbar in beginning of body
+
 document.body.insertAdjacentHTML("afterbegin", navbar);

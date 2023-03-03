@@ -1,4 +1,3 @@
-// ===== Search Engine Selector and Options =====
 const selectDiv = document.querySelector("#searchEngineSelect");
 const searchEngines = document.querySelector("#searchEngines");
 const options = Array.from(searchEngines.options);
@@ -23,7 +22,6 @@ selectDiv.addEventListener("click", () => {
 		optionItem.setAttribute("tabindex", "0");
 
 		if (option.selected) {
-			// Highlight the selected option with pink color
 			optionItem.innerHTML = `<span style="color: var(--variable-color)">${option.text}</span>`;
 		}
 
@@ -39,8 +37,6 @@ selectDiv.addEventListener("click", () => {
 	selectDiv.parentNode.appendChild(optionsList);
 });
 
-// ===== Search Function =====
-
 function doSearch() {
 	let sf = document.searchform;
 	let submitTo = sf.sengines.value + encodeURIComponent(sf.searchterms.value);
@@ -49,16 +45,16 @@ function doSearch() {
 	return false;
 }
 
-// ===== Buttons =====
-
 let getValue = document.getElementById("searchBar");
 let clearBtn = document.getElementById("clearBtn");
+
 function clearSearch() {
 	if (getValue.value != "") {
 		getValue.value = "";
 	}
 	clearBtn.style.visibility = "hidden";
 }
+
 getValue.addEventListener("input", function () {
 	clearBtn.hidden = !this.value;
 	clearBtn.style.visibility = "visible";

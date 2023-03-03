@@ -24,7 +24,6 @@
 		font-size: 20px;
 	}
 }
-
 #settingsModal {
 	position: absolute;
 	right: -5px;
@@ -35,6 +34,10 @@
 	border-bottom: 2px solid;
 	border-radius: 0 0 0 10px;
 	background-color: var(--secondary);
+	&.active {
+		transform: scale(1);
+		z-index: 2;
+	}
 	#colorPicker {
 		display: none;
 	}
@@ -51,10 +54,6 @@
 		justify-content: space-between;
 		border-bottom: 2px solid;
 	}
-}
-#settingsModal.active {
-	transform: scale(1);
-	z-index: 2;
 }
 #sidebar.open {
 	#settingsModal {

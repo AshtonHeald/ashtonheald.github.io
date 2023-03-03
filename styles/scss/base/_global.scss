@@ -11,15 +11,14 @@ form * {
 	appearance: none;
 	border: none;
 }
-
 #container {
 	background-color: var(--tertiary);
-}
-@include media-3 {
-	#container {
+	@include media-3 {
 		margin-left: 80px;
 		transition: 500ms;
 	}
+}
+@include media-3 {
 	#sidebar.open ~ #container {
 		margin-left: 200px;
 		transition: 500ms;

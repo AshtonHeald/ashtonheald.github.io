@@ -10,5 +10,5 @@ const header = `
 		</div>
 </header>
 `;
-// inserting navbar in beginning of body
+
 document.body.insertAdjacentHTML("afterbegin", header);

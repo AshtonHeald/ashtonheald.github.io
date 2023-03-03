@@ -2,7 +2,7 @@
 	"name": "startpage",
 	"description": "Start Page & Code Playground",
 	"version": "1.0.0",
-	"main": "index.js",
+	"main": "main.js",
 	"scripts": {
 		"compile:sass": "sass --watch styles/scss:styles/css"
 	},
@@ -15,14 +15,12 @@
 	"bugs": {
 		"url": "https://github.com/AshtonHeald/ashtonheald.github.io/issues"
 	},
-	"homepage": "https://github.com/AshtonHeald/ashtonheald.github.io#readme",
+	"homepage": "https://github.com/AshtonHeald/ashtonheald.github.io",
 	"devDependencies": {
 		"sass": "^1.53.0"
 	},
 	"dependencies": {
-		"@alpacahq/alpaca-trade-api": "^2.16.1",
 		"autoprefixer": "^10.4.7",
-		"postcss": "^8.4.14",
-		"requirejs": "^2.3.6"
+		"postcss": "^8.4.14"
 	}
 }

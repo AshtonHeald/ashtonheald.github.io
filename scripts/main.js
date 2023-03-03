@@ -13,3 +13,5 @@ callAll("scripts/components/menu.js");
 callAll("scripts/components/clock.js");
 callAll("scripts/components/search.js");
 callAll("scripts/components/modals.js");
+//=====
+callAll("scripts/components/general.js");

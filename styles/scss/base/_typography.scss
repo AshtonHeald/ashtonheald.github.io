@@ -8,8 +8,8 @@ h1 {
 	font-size: 2rem;
 	font-weight: bold;
 	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: black;
-	color: #fff;
+	-webkit-text-stroke-color: var(--primary);
+	color: var(--secondary);
 	@include media-2 {
 		font-size: 3rem;
 		-webkit-text-stroke-width: 2px;
