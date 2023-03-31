@@ -43,8 +43,8 @@ const navbar = `
 				<ul>
 			<li class="navItem">
 				<button class="navBtn">
-					<span><i class="fa-regular fa-universal-access"></i></span>
-					<span>A11y</span>
+					<span><i class="fa-regular fa-clock"></i></span>
+					<span>Time</span>
 				</button>
 			</li>
 			<li class="navItem">
